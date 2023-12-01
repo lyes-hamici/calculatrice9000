@@ -89,6 +89,17 @@ def calculatrice():
     fichier = open("historique.txt", "a")
     fichier.write( chaine + "\n")
     fichier.close()
+
+    clear = input("Voulez vous clear l'historique : y/n : ")
+    if clear == "y":
+        fichier = open("historique.txt", "w")
+        fichier.write(" ")
+        print("L'historique à était clear.")
+
+    else:
+        print("Historique conserver.")
+
+    
         
 
 calculatrice()
