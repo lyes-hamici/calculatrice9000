@@ -76,9 +76,19 @@ def calculatrice():
     print("----------------------------------")
 
     print("résultat final :",a,signe,b," = ",result)
+    chaine = ""
+    chaine += str(a)
+    chaine += " "
+    chaine += str(signe)
+    chaine += " "
+    chaine += str(b)
+    chaine += " = "
+    chaine += str(result)
     
     print("----------------------------------")
-        
+    fichier = open("historique.txt", "a")
+    fichier.write( chaine + "\n")
+    fichier.close()
         
 
 calculatrice()
